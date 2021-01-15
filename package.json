@@ -20,11 +20,11 @@
     "commands": [
       {
         "command": "testacle.open",
-        "title": "Split editor with Test/Implementation"
+        "title": "Testacle: Split editor with Test/Implementation"
       },
       {
         "command": "testacle.switch",
-        "title": "Go to Test/Implementation"
+        "title": "Testacle: Go to Test/Implementation"
       }
     ],
     "keybindings": [

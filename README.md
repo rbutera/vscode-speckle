@@ -1,14 +1,19 @@
+<img src="./assets/icon.png" style="width: 128px" />
 # Testacle
+
+> Open tests quickly
 
 This Visual Studio Code extension is designed to make working with TDD and testing in general much more convenient, by allowing you to:
 
 - Switch between implementation and test/spec file quickly
 - Open a test/spec file or implementation in a new window.
 
+![Demonstration Gif](./assets/testacle-preview.gif)
+
 ## Usage
 
-- To open test/implementation, you can use the command `Split editor with Test/Implementation` or using shortcut `cmd + shift + t` (`ctrl+shift+alt+t` on windows/linux)
-- To switch between test/implementation, you can use the command `Go to Test/Implementation` or using shortcut `cmd + shift + alt + t` (`ctrl+shift+alt+t` on windows/linux)
+- To switch between test/implementation, you can use the command `Testacle: Go to Test/Implementation` or using shortcut `cmd + shift + alt + t` (`ctrl+shift+alt+t` on windows/linux)
+- To open test/implementation in a new editor alongside your existing, you can use the command `Testacle: Split editor with Test/Implementation` or using shortcut `cmd + shift + t` (`ctrl+shift+alt+t` on windows/linux)
 
 ## Supported Files and Patterns
 
