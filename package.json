@@ -12,6 +12,7 @@
     "Other"
   ],
   "activationEvents": [
+    "onStartupFinished",
     "onCommand:testacle.switch",
     "onCommand:testacle.open"
   ],
