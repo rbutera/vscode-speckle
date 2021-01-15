@@ -1,5 +1,4 @@
-import { getSourceFilePath } from "../../getSourceFilePath";
-
+import { getSourceFilePath } from "../../src/getSourceFilePath";
 describe("getSourceFilePath", () => {
   test("should work with .test suffix", () => {
     const result = getSourceFilePath("/user/demo/__tests__/sum.test.js");

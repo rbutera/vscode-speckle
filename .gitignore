@@ -4,3 +4,4 @@ node_modules
 *.vsix
 .cache
 release-announcement.md
+.parcel-cache

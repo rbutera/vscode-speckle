@@ -1,5 +1,6 @@
 .vscode/**
 .vscode-test/**
+out
 out/test/**
 src/**
 node_modules/**
@@ -10,3 +11,4 @@ vsc-extension-quickstart.md
 **/*.map
 **/*.ts
 .cache
+.parcel-cache

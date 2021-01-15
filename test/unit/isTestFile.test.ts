@@ -1,4 +1,4 @@
-import { isTestFile } from "../../isTestFile";
+import { isTestFile } from "../../src/isTestFile";
 
 describe("isTestFile", () => {
   test("should return true when is .test file", () => {

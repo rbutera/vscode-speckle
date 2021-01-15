@@ -1,4 +1,4 @@
-import { getTestFilePath } from "../../getTestFilePath";
+import { getTestFilePath } from "../../src/getTestFilePath";
 
 describe("getTestFilePath", () => {
   test("should return possible paths of source file", () => {

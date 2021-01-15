@@ -3,7 +3,7 @@ import {
   FilenameParts,
   processFilename,
   removeTestFromPrefix,
-} from "../../processFilename";
+} from "../../src/processFilename";
 
 describe("processFilename", () => {
   it("splits a filename with no prefix into its filename and extension", () => {
