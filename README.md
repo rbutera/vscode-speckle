@@ -7,8 +7,8 @@ This Visual Studio Code extension is designed to make working with TDD and testi
 
 ## Usage
 
-- To open test/implementation, you can use the command `Open test or implementation in new tab` or using shortcut `cmd + shift + t` (`ctrl+shift+alt+t` on windows/linux)
-- To switch between test/implementation, you can use the command `Switch between test and implementation` or using shortcut `cmd + shift + alt + t` (`ctrl+shift+alt+t` on windows/linux)
+- To open test/implementation, you can use the command `Split editor with Test/Implementation` or using shortcut `cmd + shift + t` (`ctrl+shift+alt+t` on windows/linux)
+- To switch between test/implementation, you can use the command `Go to Test/Implementation` or using shortcut `cmd + shift + alt + t` (`ctrl+shift+alt+t` on windows/linux)
 
 ## Supported Files and Patterns
 

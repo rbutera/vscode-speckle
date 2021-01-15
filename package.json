@@ -20,11 +20,11 @@
     "commands": [
       {
         "command": "testacle.open",
-        "title": "Open test or implementation in new tab"
+        "title": "Split editor with Test/Implementation"
       },
       {
         "command": "testacle.switch",
-        "title": "Switch between test and implementation"
+        "title": "Go to Test/Implementation"
       }
     ],
     "keybindings": [
