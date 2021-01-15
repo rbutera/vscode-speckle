@@ -41,7 +41,7 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "yarn run build",
+    "vscode:prepublish": "yarn run compile",
     "compile": "tsc -p ./",
     "build": "parcel build src/extension.ts -d out -o extension.js -t node ",
     "lint": "eslint src --ext ts",
