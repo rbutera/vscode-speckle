@@ -2,7 +2,7 @@
   "name": "testacle",
   "displayName": "Testacle",
   "description": "Switch to source file from a test file, or vice versa, or open either in a new tab!",
-  "version": "1.33.7",
+  "version": "1.33.7r1",
   "publisher": "rbutera",
   "icon": "assets/icon.png",
   "engines": {

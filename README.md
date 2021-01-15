@@ -2,7 +2,7 @@
 
 # Testacle
 
-> Open tests quickly
+> Spectacles for your Tests - Work with test files quickly and easily!
 
 This Visual Studio Code extension is designed to make working with TDD and testing in general much more convenient, by allowing you to:
 
