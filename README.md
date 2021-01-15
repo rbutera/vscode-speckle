@@ -1,4 +1,5 @@
-<img src="./assets/icon.png" style="width: 128px" />
+<img src="./assets/icon.png" width="150" height="150"/>
+
 # Testacle
 
 > Open tests quickly
