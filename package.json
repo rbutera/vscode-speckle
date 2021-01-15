@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "testacle",
-=======
-  "name": "vscode.testacle",
->>>>>>> 8635481ede951520a5150ced5f51cd2d36c2b88b
   "displayName": "Testacle",
   "description": "Switch to source file from a test file, or vice versa, or open either in a new tab!",
   "version": "1.33.7",
