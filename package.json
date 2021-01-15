@@ -2,7 +2,7 @@
   "name": "vscode-testacle",
   "displayName": "Testacle",
   "description": "Switch to source file from a test file, or vice versa, or open either in a new tab!",
-  "version": "0.0.1",
+  "version": "1.33.7",
   "publisher": "rbutera",
   "icon": "assets/icon.png",
   "engines": {
@@ -41,8 +41,8 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "yarn run compile",
-    "compile": "tsc -p ./",
+    "vscode:prepublish": "yarn run build",
+    "build": "parcel build src/extension.ts -d out -o extension.js -t node ",
     "lint": "eslint src --ext ts",
     "watch": "tsc -watch -p ./",
     "pretest": "yarn run compile && yarn run lint",
@@ -64,6 +64,7 @@
   },
   "dependencies": {
     "@types/jest": "^26.0.20",
+    "parcel-bundler": "^1.12.4",
     "ramda": "^0.27.1"
   },
   "repository": {
