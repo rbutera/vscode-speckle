@@ -1,6 +1,6 @@
-<img src="./assets/icon/icon-transparent@0.5x.png"/>
-
 # Speckle
+
+![icon](https://github.com/rbutera/vscode-speckle/raw/master/assets/icon/icon-transparent@0.5x.png)
 
 > Work with test files quickly and easily!
 

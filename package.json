@@ -4,7 +4,7 @@
   "description": "Switch to source file from a test file, or vice versa, or open either in a new tab!",
   "version": "1.3.37",
   "publisher": "rbutera",
-  "icon": "assets/icon/icon-transparent.png",
+  "icon": "assets/icon/icon-transparent@0.5x.png",
   "targets": {
     "default": {
       "includeNodeModules": {
