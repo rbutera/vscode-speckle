@@ -1,8 +1,10 @@
 # Speckle
 
-![icon](https://github.com/rbutera/vscode-speckle/raw/master/assets/icon/icon-transparent@0.5x.png)
+![icon](https://github.com/rbutera/vscode-speckle/raw/master/assets/icon/icon-with-background@0.5x.png)
 
 > Work with test files quickly and easily!
+
+Do you work with unit tests and/or spec files? This extension is for you!
 
 This Visual Studio Code extension is designed to make working with TDD and testing in general much more convenient, by allowing you to:
 
@@ -11,20 +13,44 @@ This Visual Studio Code extension is designed to make working with TDD and testi
 
 ![Demonstration Gif](./assets/speckle-preview.gif)
 
+### Supported Files and Patterns
+
+- ✅️ All file extensions (eg. `.js`, `.ts`, `.py`) are supported.
+- ✅️ File extensions can have prefixes (e.g. `foo.service.ts`)
+- ✅️ Test files prefixes are supported (e.g. `foo.spec.ts` or `foo.service.spec.ts`) or can be omitted if the test is in a specific tests directory.
+- ✅️ Test files can be contained in a `__tests__` directory, or stored directly next to implementation.
+
 ## Usage
 
-- To switch between test/implementation, you can use the command `speckle: Go to Test/Implementation` or using shortcut `cmd + shift + alt + t` (`ctrl+shift+alt+t` on windows/linux)
-- To open test/implementation in a new editor alongside your existing, you can use the command `speckle: Split editor with Test/Implementation` or using shortcut `cmd + shift + t` (`ctrl+shift+alt+t` on windows/linux)
+Speckle provides two commands that you can access in any of three ways:
 
-## Supported Files and Patterns
+- Using the command palette (cmd+P or ctrl+P) and typing in some part of the "action" below
+- Using the provided keyboard shortcut
+- Using a customized keyboard shortcut, using the command name below.
 
-All file extensions (eg. `.js`, `.ts`, `.py`) are supported
+| Action / Command Palette Description  | Default Keyboard Shortcut                                       | Command Name     |
+| ------------------------------------- | --------------------------------------------------------------- | ---------------- |
+| Switch between test/implementation    | Mac: `cmd+shift+alt+t` <br /> Windows/Linux: `ctrl+shift+alt+t` | `speckle.switch` |
+| Split editor with Test/Implementation | Mac: `cmd+alt+t` <br /> Windows/Linux: `ctrl+alt+t`             | `speckle.open`   |
 
-File extensions can have prefixes (e.g. `foo.service.ts`)
+We recommend you customize the keyboard shortcut as the one provided was chosen to avoid collisions with other extensions and functionality.
 
-Test files can have prefixes (e.g. `foo.spec.ts` or `foo.service.spec.ts`)
+### Customizing Keyboard Shortcuts
 
-Test files can be contained in a `__tests__` directory, or stored directly next to implementation.
+In keybindings.json:
+
+```json
+[
+  {
+    "command": "speckle.open",
+    "key": "ctrl+shift+t"
+  },
+  {
+    "command": "speckle.switch",
+    "key": "ctrl+alt+shift+t"
+  }
+]
+```
 
 ## Credits
 
