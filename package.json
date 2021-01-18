@@ -1,10 +1,10 @@
 {
-  "name": "testacle",
-  "displayName": "Testacle",
+  "name": "speckle",
+  "displayName": "speckle",
   "description": "Switch to source file from a test file, or vice versa, or open either in a new tab!",
-  "version": "2.0.0",
+  "version": "1.3.37",
   "publisher": "rbutera",
-  "icon": "assets/icon.png",
+  "icon": "assets/icon/icon-transparent.png",
   "targets": {
     "default": {
       "includeNodeModules": {
@@ -20,29 +20,29 @@
   ],
   "activationEvents": [
     "onStartupFinished",
-    "onCommand:testacle.switch",
-    "onCommand:testacle.open"
+    "onCommand:speckle.switch",
+    "onCommand:speckle.open"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "testacle.open",
-        "title": "Testacle: Split editor with Test/Implementation"
+        "command": "speckle.open",
+        "title": "speckle: Split editor with Test/Implementation"
       },
       {
-        "command": "testacle.switch",
-        "title": "Testacle: Go to Test/Implementation"
+        "command": "speckle.switch",
+        "title": "speckle: Go to Test/Implementation"
       }
     ],
     "keybindings": [
       {
-        "command": "testacle.open",
+        "command": "speckle.open",
         "key": "ctrl+shift+t",
         "mac": "shift+cmd+t"
       },
       {
-        "command": "testacle.switch",
+        "command": "speckle.switch",
         "key": "ctrl+alt+shift+t",
         "mac": "alt+shift+cmd+t"
       }
@@ -82,10 +82,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rbutera/vscode-testacle"
+    "url": "https://github.com/rbutera/vscode-speckle"
   },
   "bugs": {
-    "url": "https://github.com/rbutera/vscode-testacle/issues"
+    "url": "https://github.com/rbutera/vscode-speckle/issues"
   },
   "keywords": [
     "switch",

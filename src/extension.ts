@@ -22,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
   // Now provide the implementation of the command with registerCommand
   // The commandId parameter must match the command field in package.json
   let switchSubscription = vscode.commands.registerCommand(
-    "testacle.switch",
+    "speckle.switch",
     () => {
       const activeFile = vscode.window.activeTextEditor;
       if (activeFile === undefined) return;
@@ -31,15 +31,12 @@ export function activate(context: vscode.ExtensionContext) {
     }
   );
 
-  let openSubscription = vscode.commands.registerCommand(
-    "testacle.open",
-    () => {
-      const activeFile = vscode.window.activeTextEditor;
-      if (activeFile === undefined) return;
+  let openSubscription = vscode.commands.registerCommand("speckle.open", () => {
+    const activeFile = vscode.window.activeTextEditor;
+    if (activeFile === undefined) return;
 
-      openTestOrImplementation(activeFile.document.uri.fsPath);
-    }
-  );
+    openTestOrImplementation(activeFile.document.uri.fsPath);
+  });
   context.subscriptions.push(switchSubscription);
   context.subscriptions.push(openSubscription);
 }
