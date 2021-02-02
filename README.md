@@ -1,5 +1,7 @@
 # Speckle
 
+[![CC BY 4.0][cc-by-shield]][cc-by-nc-nd] ![all operating systems supported](https://img.shields.io/badge/os-windows%20%7C%20macos%20%7C%20linux-yellowgreen) [![Version](https://img.shields.io/github/package-json/version/rbutera/vscode-speckle.svg?style=social)](https://github.com/rbutera/vscode-speckle.svg) [![GitHub](https://img.shields.io/github/stars/rbutera/vscode-speckle.svg?style=social)](https://github.com/rbutera/vscode-speckle)
+
 ![icon](https://github.com/rbutera/vscode-speckle/raw/master/assets/icon/icon-with-background@0.5x.png)
 
 > Work with test files quickly and easily!
@@ -12,6 +14,8 @@ This Visual Studio Code extension is designed to make working with TDD and testi
 - Open a test/spec file or implementation in a new window.
 
 ![Demonstration Gif](./assets/speckle-preview.gif)
+
+Install at the [Microsoft Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=rbutera.speckle)
 
 ### Supported Files and Patterns
 
@@ -62,13 +66,13 @@ This project was forked from [Go-To-Test](https://github.com/futantan/go-to-test
 
 ## License
 
-Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
+Shield:
 
 This work is licensed under a
-[Creative Commons Attribution 4.0 International License][cc-by].
+[Creative Commons Attribution-NonCommercial-NoDerivs 4.0 International License][cc-by-nc-nd].
 
-[![CC BY 4.0][cc-by-image]][cc-by]
+[![CC BY-NC-ND 4.0][cc-by-image]][cc-by-nc-nd]
 
-[cc-by]: http://creativecommons.org/licenses/by/4.0/
-[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
-[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+[cc-by-nc-nd]: http://creativecommons.org/licenses/by-nc-nd/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/license-CC--BY--NC--ND%204.0-orange.svg?style=flat-square
