@@ -13,5 +13,5 @@
     "incremental": true,
     "lib": ["es6", "ES2020.Promise", "es2015.promise"]
   },
-  "exclude": ["node_modules", "dist", ".vscode-test", "out"]
+  "exclude": ["node_modules", "dist", ".vscode-test", "out", "**/__mocks__/*"]
 }
