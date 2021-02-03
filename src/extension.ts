@@ -1,43 +1,8 @@
 import * as vscode from 'vscode'
-import { ifElse, compose } from 'ramda'
-import { getSourceFilePath } from './utils/get-source-file-path'
-import { getTestFilePath } from './utils/get-test-file-path'
-import { isTestFile } from './utils/is-test-file'
-import { switchToFile } from './utils/switch-to-file'
-import { openFile } from './utils/open-file'
 
-const switchToSourceOf = compose(switchToFile, getSourceFilePath)
-const switchToTestOf = compose(switchToFile, getTestFilePath)
-const switchBetweenSourceAndTest = ifElse(
-  isTestFile,
-  switchToSourceOf,
-  switchToTestOf
-)
-
-const openSourceOf = compose(openFile, getSourceFilePath)
-const openTestOf = compose(openFile, getTestFilePath)
-const openTestOrImplementation = ifElse(isTestFile, openSourceOf, openTestOf)
-
-export const switchCommand = () => {
-  const activeFile = vscode.window.activeTextEditor
-  if (activeFile === undefined) return
-
-  switchBetweenSourceAndTest(activeFile.document.uri.fsPath)
-}
-
-export const openCommand = () => {
-  const activeFile = vscode.window.activeTextEditor
-  if (activeFile === undefined) return
-
-  openTestOrImplementation(activeFile.document.uri.fsPath)
-}
-
-export const createCommand = () => {
-  const activeFile = vscode.window.activeTextEditor
-  if (activeFile === undefined) return
-
-  openTestOrImplementation(activeFile.document.uri.fsPath)
-}
+import { openCommand } from './commands/open.command'
+import { switchCommand } from './commands/switch.command'
+import { createCommand } from './commands/create.command'
 
 export function activate(context: vscode.ExtensionContext) {
   // The command has been defined in the package.json file
