@@ -1,12 +1,10 @@
 import * as vscode from 'vscode'
-import * as fs from 'fs'
 import { OpenOption } from '../types/open-option.type'
-
-export async function switchToFile({ possiblePaths, fileName }: OpenOption) {
-  const target = possiblePaths.find(fs.existsSync)
-  if (!target) {
-    throw new Error(fileName)
-  }
-  const document = await vscode.workspace.openTextDocument(target)
+import openTextDocument from './open-text-document'
+export async function switchToFile({
+  possiblePaths,
+  fileName,
+}: OpenOption): Promise<vscode.TextEditor> {
+  const document = await openTextDocument({ possiblePaths, fileName })
   return vscode.window.showTextDocument(document)
 }
