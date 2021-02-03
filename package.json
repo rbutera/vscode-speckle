@@ -25,6 +25,21 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "Speckle",
+      "properties": {
+        "speckle.useTestsDirectoryForCreation": {
+          "type": "boolean",
+          "default": false,
+          "description": "When using 'Create Test File' command, use the jest __tests directory instead of colocating tests"
+        },
+        "speckle.testExtensionPrefix": {
+          "type": "string",
+          "default": "spec",
+          "description": "Prefix to use for tests, e.g. set to 'spec' if your tests are foo.spec.js or 'test' if your tests are foo.test.js, or set to an empty string if just foo.js"
+        }
+      }
+    },
     "commands": [
       {
         "command": "speckle.open",
@@ -33,6 +48,10 @@
       {
         "command": "speckle.switch",
         "title": "speckle: Go to Test/Implementation"
+      },
+      {
+        "command": "speckle.create",
+        "title": "speckle: Create Test File"
       }
     ],
     "keybindings": [
@@ -57,7 +76,7 @@
     "watch": "tsc -watch -p ./",
     "pretest": "yarn run compile && yarn run lint",
     "test": "jest",
-    "unit:test": "jest --watch"
+    "test:watch": "jest --watch"
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",
