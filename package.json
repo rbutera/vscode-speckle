@@ -118,6 +118,7 @@
   },
   "dependencies": {
     "@types/jest": "^26.0.20",
+    "camelcase": "^6.2.0",
     "ramda": "^0.27.1",
     "vscode": "^1.1.37"
   },
