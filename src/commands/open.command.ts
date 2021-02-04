@@ -23,12 +23,16 @@ export async function openTestOf(file: string): Promise<vscode.TextEditor> {
   return openFile(openOptions)
 }
 
-const openSourceOf = compose(openFile, getSourceFilePath)
-const openTestOrImplementation = ifElse(isTestFile, openSourceOf, openTestOf)
+export const openSourceOf = compose(openFile, getSourceFilePath)
+export const openTestOrImplementation = ifElse(
+  isTestFile,
+  openSourceOf,
+  openTestOf
+)
 
-export const openCommand = () => {
+export const openCommand = async (): Promise<boolean | vscode.TextEditor> => {
   const activeFile = vscode.window.activeTextEditor
-  if (activeFile === undefined) return
+  if (activeFile === undefined) return false
 
-  openTestOrImplementation(activeFile.document.uri.fsPath)
+  return openTestOrImplementation(activeFile.document.uri.fsPath)
 }
