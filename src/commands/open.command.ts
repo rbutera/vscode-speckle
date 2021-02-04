@@ -16,6 +16,7 @@ export async function openTestOf(file: string): Promise<vscode.TextEditor> {
     const openOptions = getTestFilePath(file)
     return openFile(openOptions)
   }
+
   try {
     return await open()
   } catch {
