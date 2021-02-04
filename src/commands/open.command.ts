@@ -12,15 +12,19 @@ export async function openTestOf(file: string): Promise<vscode.TextEditor> {
   const { automaticallyCreateTestFile } = vscode.workspace.getConfiguration(
     'speckle'
   )
-
-  const testFilePath = createTestFilePath(file)
-
-  if (automaticallyCreateTestFile) {
-    await createFile(testFilePath)
+  const open = async () => {
+    const openOptions = getTestFilePath(file)
+    return openFile(openOptions)
   }
-
-  const openOptions = getTestFilePath(file)
-  return openFile(openOptions)
+  try {
+    return await open()
+  } catch {
+    if (automaticallyCreateTestFile) {
+      const testFilePath = createTestFilePath(file)
+      await createFile(testFilePath)
+      return open()
+    }
+  }
 }
 
 export const openSourceOf = compose(openFile, getSourceFilePath)
