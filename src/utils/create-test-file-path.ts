@@ -11,7 +11,7 @@ import { SpeckleConfiguration } from '../types/speckle-configuration.type'
  * otherwise uses the current directory
  * @param filePath the implementation filename
  */
-export default function createTestFilePath(filePath: string): string {
+export function createTestFilePath(filePath: string): string {
   const {
     useTestsDirectoryForCreation,
     testExtensionPrefix,

@@ -1,9 +1,9 @@
 import { switchToFile } from './switch-to-file'
-import openTextDocument from './open-text-document'
+import { openTextDocument } from './open-text-document'
 import * as vscode from 'vscode'
 jest.mock('vscode')
 jest.mock('./open-text-document', () => ({
-  default: jest.fn().mockReturnValue('document'),
+  openTextDocument: jest.fn().mockReturnValue('document'),
 }))
 
 describe('switchToFile', () => {

@@ -8,8 +8,8 @@ const writeFile = util.promisify(fs.readFile)
 const camelCase = require('camelCase')
 
 export type CreateFileOptions = {
-  readonly contents: boolean | string
-  readonly useJavascriptTemplate: boolean
+  readonly contents?: boolean | string
+  readonly useJavascriptTemplate?: boolean
 }
 
 export async function createFile(
@@ -19,7 +19,12 @@ export async function createFile(
     useJavascriptTemplate: false,
   }
 ): Promise<string> {
-  const { name } = processFilename(fullFileName)
+  const { name, extension } = processFilename(fullFileName)
+  const isJavascriptOrTypescript = ['ts', 'js', 'tsx', 'jsx'].includes(
+    extension
+  )
+  const shouldUseJavascriptTemplate =
+    isJavascriptOrTypescript || useJavascriptTemplate
   const description: string = camelCase(name)
   const javascriptTemplate = `import { description } from './${name}'\n\ndescribe('${description}', () => {\n\n})`
   if (fs.existsSync(fullFileName)) {
@@ -27,7 +32,7 @@ export async function createFile(
   }
 
   const contentsOrBlank = !contents ? '' : `${contents as string}`
-  const contentsToWrite = useJavascriptTemplate
+  const contentsToWrite = shouldUseJavascriptTemplate
     ? javascriptTemplate
     : contentsOrBlank
 

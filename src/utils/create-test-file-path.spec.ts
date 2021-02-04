@@ -1,4 +1,4 @@
-import createTestFilePath from './create-test-file-path'
+import { createTestFilePath } from './create-test-file-path'
 import * as vscode from 'vscode'
 
 jest.mock('vscode')

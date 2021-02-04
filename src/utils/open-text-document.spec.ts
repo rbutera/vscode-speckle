@@ -1,4 +1,4 @@
-import openTextDocument from './open-text-document'
+import { openTextDocument } from './open-text-document'
 import targetFile from './target-file'
 import * as vscode from 'vscode'
 jest.mock('vscode')
