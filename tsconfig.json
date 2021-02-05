@@ -1,16 +1,17 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "declaration": true,
+    "removeComments": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "target": "es6",
-    "outDir": "out",
-    "lib": ["es6"],
     "sourceMap": true,
-    "rootDir": "src",
-    "strict": true /* enable all strict type-checking options */
-    /* Additional Checks */
-    // "noImplicitReturns": true, /* Report error when not all code paths in function return a value. */
-    // "noFallthroughCasesInSwitch": true, /* Report errors for fallthrough cases in switch statement. */
-    // "noUnusedParameters": true,  /* Report errors on unused parameters. */
+    "outDir": "out",
+    "incremental": true,
+    "lib": ["es6", "ES2020.Promise", "es2015.promise"]
   },
-  "exclude": ["node_modules", ".vscode-test", "test"]
+  "exclude": ["node_modules", "dist", ".vscode-test", "out", "**/__mocks__/*"]
 }
