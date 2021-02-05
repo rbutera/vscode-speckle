@@ -12,6 +12,8 @@ This Visual Studio Code extension is designed to make working with TDD and testi
 
 - Switch between implementation and test/spec file quickly
 - Open a test/spec file or implementation in a new window.
+- Create a test/spec file from the implementation
+  - (Optional) automatically create a test/spec file when attempting to switch to it or open it if the file doesn't already exist
 
 ![Demonstration Gif](./assets/speckle-preview.gif)
 
@@ -38,6 +40,21 @@ Speckle provides two commands that you can access in any of three ways:
 | Split editor with Test/Implementation | Mac: `cmd+alt+t` <br /> Windows/Linux: `ctrl+alt+t`             | `speckle.open`   |
 
 We recommend you customize the keyboard shortcut as the one provided was chosen to avoid collisions with other extensions and functionality.
+
+### Configuration
+
+Speckle should work out of the box, but you can customize the settings to fit any .
+
+To configure these options globally, you can add them to your `settings.json` (type 'User Settings JSON' in command palette).
+Alternatively, to configure them for just your active workspace, you can add them to your `.vscode/settings.json` in your project.
+
+```jsonc
+{
+  "speckle.useTestsDirectoryForCreation": false, // if set to true, then instead of co-locating tests, it will use the __tests__ folder (jest convention)
+  "speckle.testExtensionPrefix": "spec", // if your tests are called foo.test.ts, then change this to 'test', or whatever you like
+  "speckle.automaticallyCreateTestFile": false // set to true to automatically create a test file if it doesn't exist when attempting to switch/open it
+}
+```
 
 ### Customizing Keyboard Shortcuts
 

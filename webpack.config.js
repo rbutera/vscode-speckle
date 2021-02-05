@@ -1,8 +1,8 @@
 //@ts-check
 
-'use strict';
+'use strict'
 
-const path = require('path');
+const path = require('path')
 
 /**@type {import('webpack').Configuration}*/
 const config = {
@@ -14,28 +14,35 @@ const config = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'extension.js',
     libraryTarget: 'commonjs2',
-    devtoolModuleFilenameTemplate: '../[resource-path]'
+    devtoolModuleFilenameTemplate: '../[resource-path]',
   },
   devtool: 'source-map',
   externals: {
-    vscode: 'commonjs vscode' // the vscode-module is created on-the-fly and must be excluded. Add other modules that cannot be webpack'ed, 📖 -> https://webpack.js.org/configuration/externals/
+    vscode: 'commonjs vscode', // the vscode-module is created on-the-fly and must be excluded. Add other modules that cannot be webpack'ed, 📖 -> https://webpack.js.org/configuration/externals/
   },
   resolve: {
     // support reading TypeScript and JavaScript files, 📖 -> https://github.com/TypeStrong/ts-loader
-    extensions: ['.ts', '.js']
+    extensions: ['.ts', '.js'],
   },
   module: {
     rules: [
       {
         test: /\.ts$/,
-        exclude: /node_modules/,
+        exclude: [
+          /node_modules/,
+          /(.)*\/?__mocks__\/.*/g,
+          path.resolve(__dirname, '__mocks__'),
+        ],
         use: [
           {
-            loader: 'ts-loader'
-          }
-        ]
-      }
-    ]
-  }
-};
-module.exports = config;
+            loader: 'ts-loader',
+            options: {
+              configFile: 'tsconfig.build.json',
+            },
+          },
+        ],
+      },
+    ],
+  },
+}
+module.exports = config
