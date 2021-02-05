@@ -2,7 +2,7 @@
   "name": "speckle",
   "displayName": "Speckle",
   "description": "Quicker and easier switching to / opening test file from a source file and vice versa!",
-  "version": "1.4.1",
+  "version": "1.4.3",
   "publisher": "rbutera",
   "icon": "assets/icon/icon-transparent@0.5x.png",
   "targets": {
