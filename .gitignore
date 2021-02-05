@@ -5,3 +5,5 @@ node_modules
 .cache
 release-announcement.md
 .parcel-cache
+.DS_Store
+.eslintcache
