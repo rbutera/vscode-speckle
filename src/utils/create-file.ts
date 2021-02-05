@@ -24,15 +24,16 @@ export async function createFile(
   }
 
   const { extension } = processFilename(fullFileName)
-  const { name } = processFilename(path.basename(fullFileName))
+  const { name, extensionPrefix } = processFilename(path.basename(fullFileName))
   const isJavascriptOrTypescript = ['ts', 'js', 'tsx', 'jsx'].includes(
     extension
   )
   const shouldUseJavascriptTemplate =
     isJavascriptOrTypescript || useJavascriptTemplate
   const description: string = camelCase(name)
+  const implementation = !extensionPrefix ? name : `${name}.${extensionPrefix}`
   const javascriptTemplate = generateJavascriptTemplate({
-    implementation: name,
+    implementation,
     name: description,
   })
 

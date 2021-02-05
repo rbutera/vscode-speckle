@@ -16,9 +16,9 @@ describe('generateJavascriptTemplate', () => {
     expect(
       generateJavascriptTemplate({
         name: 'fooBar',
-        implementation: 'foo-bar',
+        implementation: 'foo-bar.service',
       })
-    ).toEqual(generateExpected('foo-bar', 'fooBar', './'))
+    ).toEqual(generateExpected('foo-bar.service', 'fooBar', './'))
   })
 
   it('returns a suitable spec file template for a file in the tests directory', () => {
@@ -28,8 +28,8 @@ describe('generateJavascriptTemplate', () => {
     expect(
       generateJavascriptTemplate({
         name: 'fooBar',
-        implementation: 'foo-bar',
+        implementation: 'foo-bar.service',
       })
-    ).toEqual(generateExpected('foo-bar', 'fooBar', '../'))
+    ).toEqual(generateExpected('foo-bar.service', 'fooBar', '../'))
   })
 })
